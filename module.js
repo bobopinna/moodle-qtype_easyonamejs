@@ -92,8 +92,9 @@ M.qtype_easyonamejs = {
 
                 var inputform = Y.one(topnode).ancestor('form');
                 if (inputform != null) {
-                var nextbutton = inputform.one('input[type=submit]');
-                nextbutton.on(['mousedown', 'touchstart'], function(e) {
+                // Select both previous and next buttons
+                var submitbuttons = inputform.all('input[type=submit]');
+                submitbuttons.on(['mousedown', 'touchstart'], function(e) {
 		        exportPromise = marvinController.sketcherInstance.exportStructure("mol", null);
 		        exportPromise.then(function(source) {
 		                source = source.replace("\n", 'MDL MOLFILE INSERTED\n');
