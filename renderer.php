@@ -121,7 +121,7 @@ class qtype_easyonamejs_renderer extends qtype_renderer {
         $result .= html_writer::start_tag('div', array('class'=> 'licence_logo'));
         $result .= html_writer::start_tag('a', array('href'=> 'http://www.chemaxon.com'));
         $result .= html_writer::empty_tag('img', array(
-        'src'=>$OUTPUT->pix_url('chemaxon', 'qtype_easyonamejs'),
+        'src'=>$OUTPUT->image_url('chemaxon', 'qtype_easyonamejs'),
         'alt'=>'ChemAxon Licence Logo',
         'id' => 'chemaxon'));
         $result .= html_writer::end_tag('a');
